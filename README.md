@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Google Review QR Code Generator
+
+## Overview
+
+This project is a web application that generates QR codes for Google Reviews.
+
+## Features
+
+- Search for businesses by name
+- Generate QR codes linking to Google Review pages
+- Responsive design using Tailwind CSS and DaisyUI
+- Server-side web scraping using Puppeteer
+
+## Tech Stack
+
+- Next.js 14
+- React 18
+- TypeScript
+- Tailwind CSS
+- DaisyUI
+- Puppeteer
+- @sparticuz/chromium-min
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```sh
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Set up your environment variables:
+   - Copy `.env.local.example` to `.env.local`
+   - Set `CHROME_EXECUTABLE_PATH` to your local Chrome installation path
+4. Run the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```sh
+   npm run dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+## Building for Production
 
-To learn more about Next.js, take a look at the following resources:
+1. Build the application:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```sh
+   npm run build
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Run the production server:
 
-## Deploy on Vercel
+   ```sh
+   npm run start
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/page.tsx`: Main application page
+- `src/app/api/scraper/route.ts`: API route for web scraping
+- `src/app/layout.tsx`: Root layout component
+- `src/app/globals.css`: Global styles
+
+## Notes
+
+- The web scraping functionality is designed to work in both local and
+  serverless environments
+
+## License
+
+This project is part of a code challenge and is not licensed for public use or
+distribution.
